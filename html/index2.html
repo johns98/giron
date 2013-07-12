@@ -10,7 +10,7 @@
     <head>
     <meta charset="utf-8" />
     <title>Hello world from Cloud9!</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main2.css" type="text/css"/>
     </head>
     <body>
         <div id="wrapper">
@@ -19,10 +19,6 @@
             </div>
             <div id="mainContent">
                 <div id="panel">
-               
-                
-                
-                
                     <div class="content">
                         <h3 align=center>概要</h3>
                         <div id="theme">
@@ -62,56 +58,6 @@
                     <div id="map">
                         <div id="ground">
                             <canvas id="canvas1"></canvas>
-                            <div id="n0" class="node">
-                                <div class="nHeader">#0</div>
-                        	    <div class="nContent">日本国における死刑制度の是非について。A：存続派、B:廃止派</div>
-                        	    <div class="nFooter">100 pt.</div>
-                            </div>
-                            <div id="n1" class="node Aside">
-                                <div class="nHeader">#1</div>
-                                <div class="nContent">死刑制度を廃止すれば極刑が無期刑となり、重大犯罪者も仮釈放の対象となるため治安上好ましくない。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            <div id="n2" class="node Aside">
-                                <div class="nHeader">#2</div>
-                                <div class="nContent">死刑制度には犯罪抑止効果を期待できる。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            <div id="n3" class="node Aside">
-                                <div class="nHeader">#3</div>
-                                <div class="nContent">2004年度の世論調査において、死刑を容認する割合は８割を超えている。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            <div id="n4" class="node Bside">
-                                <div class="nHeader">#4</div>
-                                <div class="nContent">誤審に対して取り返しがつかない。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            <div id="n5" class="node Bside">
-                                <div class="nHeader">#5</div>
-                                <div class="nContent">国家が生存権を侵害する正当性はない。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            
-                            <div id="n6" class="node Bside">
-                                <div class="nHeader">#6</div>
-                                <div class="nContent">死刑の残虐性は明らかであり、国際的にも先進国は死刑を廃止する流れである。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            
-                            <div id="n7" class="node Bside">
-                                <div class="nHeader">#7</div>
-                                <div class="nContent">死刑執行人にかかる精神的負担はあまりに過酷である。</div>
-                                <div class="nFooter">100 pt.</div>
-                            </div>
-                            
-                            <div id="n8" class="node Bside">
-                                <div class="nHeader">#8</div>
-                                <div class="nContent">ああああああああああああああああああああああああああああああああああああああああああああああああああ</div>
-                                <div class="nFooter">(実効/素点)105/100</div>
-                            </div>
-                            
-                            <!--
                             <div  class="node" id="n1" title="日本国における死刑制度の是非について。A：存続派、B:廃止派"><div class="nodeContent">Root</div></div>
                             <div  class="node Aside" id="n2" title="死刑制度を廃止すれば極刑が無期刑となり、重大犯罪者であっても仮釈放の対象となる"><div class="nodeContent">A1</div></div>
                             <div  class="node Aside" id="n3" title="死刑制度には犯罪抑止効果を期待できる"><div class="nodeContent">A2</div></div>
@@ -130,7 +76,6 @@
                             <div  class="node Aside" id="n16" title="苦痛をできるだけ少なく生命を奪う刑は、必ずしも残虐とはいえない"><div class="nodeContent"></div></div>
                             <div  class="node Aside" id="n17" title="社会復帰しない受刑者を収容し続けることは有意義でない"><div class="nodeContent"></div></div>
                             <div  class="node Bside" id="n18" title="再審無罪がありえる以上、死刑と自由刑には明確な差異が存在している"><div class="nodeContent"></div></div>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -166,9 +111,6 @@
     		$( "#ground" ).draggable({ scroll: false });
             $( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
             test();
-            handle(0);
-            $( "#svg" ).draggable({ scroll: false });
-            
     	});
         
         //ウィンドウサイズに合わせて表示
@@ -189,7 +131,6 @@
 
             $('#controller').css( 'top', (parseInt(h)-300)+'px');
             $('#controller').css( 'left', (parseInt(w)-300)+'px');
-
         }
         
     //キャンバス描画    
@@ -256,54 +197,12 @@
         $('#map').css( 'visibility','visible');
         $('#controller').css( 'visibility','visible');
     });
-    /*
+    
     $(function(){
         $("#map").mousewheel(function(eo, delta, deltaX, deltaY) {
             document.getElementById("wheel").innerHTML ="wheel moving:"+delta;
         });
-    });*/
-    
-        var zoom=10;
-    function handle(delta) {
-    	zoom=zoom+delta;
-    	document.getElementById("wheel").innerHTML="zoom:"+zoom;
-    	//document.getElementById("map").style.fontSize=zoom+"px";
-        var nArray = document.getElementsByClassName("node");
-        for (var i=0; i<nArray.length; i++){
-            nArray[i].style.fontSize= Math.floor( Math.random() * 10 + 1  )*zoom+"px";
-            //nArray[i].style.top=500+zoom+"px";
-            //nArray[i].style.left=500+zoom+"px";
-        }        
-    }
-
-    /** Event handler for mouse wheel event.
-     */
-    function wheel(event){
-            var delta = 0;
-            if (!event) /* For IE. */
-                    event = window.event;
-            if (event.wheelDelta) { /* IE/Opera. */
-                    delta = event.wheelDelta/120;
-                    if (window.opera)
-                            delta = -delta;
-            } else if (event.detail) { /** Mozilla case. */
-                    delta = -event.detail/3;
-            }
-            /** If delta is nonzero, handle it.
-             * Basically, delta is now positive if wheel was scrolled up,
-             * and negative, if wheel was scrolled down.
-             */
-            if (delta)
-                    handle(delta);
-            if (event.preventDefault) {
-                    event.preventDefault();
-            }
-            event.returnValue = false;
-    }
-
-    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-    window.onmousewheel = document.onmousewheel = wheel;
-
+    });
     
 </script>
     </body>

@@ -4,7 +4,8 @@
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-} 
+}
+    
 html,body {
     height:100%;
     margin:0;
@@ -15,19 +16,17 @@ h1{
     margin:0;
 }
 .node{
-    position: absolute;
-/*   -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;   */
-   -moz-border-radius: 1em; -webkit-border-radius: 1em; border-radius: 1em;   
-    margin:0;
-    padding:0.5em;
-    width:19.1em;
-    height:7.9em;
-    border:solid 0.2em;
-}  
-.nHeader{text-align:center;}
-.nContent{height:4.5em;line-height:1.5em;letter-spacing: 0.1em;border-top:solid 0.1em;border-bottom:solid 0.1em;}
-.nFooter{text-align:right;}
-
+   border:solid;
+   padding:15px;
+   margin:5px;
+   width:160px;
+   height:160px;
+   -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;   
+ }  
+.nodeContent{
+    text-align: center;
+    vertical-align: middle;
+}
 #wrapper{ 
     margin-left:auto;
     margin-right:auto;
@@ -107,45 +106,61 @@ h1{
     background-color:#f6ad49;
     position: absolute;
 }
-#n0{
-    position: absolute;
+#n1{
     background-color:#FFFFFF;
+    position: absolute;
     top: 500px;
     left: 500px;
 }
-
-#n1{
+#n2{
     top: 820px;
     left: 570px;    
-}
-
-#n2{
-    top: 920px;
-    left: 580px;    
+    width:90px;
+    height:90px;
 }
 #n3{
+    top: 920px;
+    left: 580px;    
+    width:80px;
+    height:80px;
+}
+#n4{
     top: 1010px;
     left: 610px;    
-   }
-#n4{
+    width:50px;
+    height:50px;
+}
+#n5{
     top: 500px;
     left: 750px;    
-   }
-#n5{
-    top: 610px;
-    left: 770px;    
+    width:100px;
+    height:100px;
 }
 #n6{
-    top: 700px;
+    top: 610px;
     left: 770px;    
+    width:80px;
+    height:80px;
 }
 #n7{
-    top: 790px;
-    left: 820px;    
+    top: 700px;
+    left: 770px;    
+    width:80px;
+    height:80px;
 }
 #n8{
+    top: 790px;
+    left: 820px;    
+    width:30px;
+    height:30px;
+    text-align: left;
+}
+#n9{
     top: 840px;
     left: 790px;    
+    width:60px;
+    height:60px;
+    text-align: left;
 }
 #n10{
     top: 945px;
@@ -212,4 +227,3 @@ h1{
     height:30px;
     text-align: left;
 }
-
