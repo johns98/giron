@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!--
+    This is an HTML page that contains a CSS and a Javascript file.
+    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <title>Hello world from Cloud9!</title>
+    <link rel="stylesheet" href="css/main2.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <h1>議論地図</h1>
+            </div>
+            <div id="mainContent">
+                <div id="panel">
+                    <div class="content">
+                        <h3 align=center>概要</h3>
+                        <div id="theme">
+                        テーマ:<br />
+                        日本国における死刑制度の是非について
+                        </div>
+                        <table width=180 align=center>
+                        <tr align=center>
+                            <th>A.存続</th>
+                            <th>B.廃止</th>
+                        </tr>
+                        <tr align=center>
+                            <td>48.1%</td>
+                            <td>51.9%</td>  
+                        </tr>
+                        <tr align=center><td colspan=2>計155票</td></tr>
+                        </table>
+                        <p>recent posts
+                        <ul>
+                            <li>hoge</li>
+                            <li>hoge</li>
+                        	<li>hoge</li>
+                    	</ul>
+                        </p>
+                        <div id="hoge"></div>
+                        <div id="wheel"></div>
+                    </div>
+                </div>
+                <div id="tabs">
+                    <ul>
+                    	<li><a href="#map">論点構造</a></li>
+                		<li><a href="#tabs-2">前提資料</a></li>
+                		<li><a href="#tabs-3">発展過程</a></li>
+                        <li><a href="#tabs-3">レポート</a></li>
+                    </ul>
+                        
+                    <div id="map">
+                        <div id="treeMap">
+                            <!--canvas id="canvas1"></canvas>
+                            <div  class="node" id="n1" title="日本国における死刑制度の是非について。A：存続派、B:廃止派"><div class="nodeContent">Root</div></div>
+                            <div  class="node Aside" id="n2" title="死刑制度を廃止すれば極刑が無期刑となり、重大犯罪者であっても仮釈放の対象となる"><div class="nodeContent">A1</div></div>
+                            <div  class="node Aside" id="n3" title="死刑制度には犯罪抑止効果を期待できる"><div class="nodeContent">A2</div></div>
+                            <div  class="node Aside" id="n4" title="2004年度の世論調査において、死刑を容認する割合は８割を超えている"><div class="nodeContent">A3</div></div>
+                            <div  class="node Bside" id="n5" title="誤審に対して取り返しがつかない"><div class="nodeContent">B1</div></div>
+                            <div  class="node Bside" id="n6" title="国家が生存権を侵害する正当性はない"><div class="nodeContent">B2</div></div>
+                            <div  class="node Bside" id="n7" title="死刑の残虐性は明らかであり、国際的にも先進国は死刑を廃止する流れである"><div class="nodeContent">B3</div></div>
+                            <div  class="node Bside" id="n8" title="死刑執行人にかかる精神的負担はあまりに過酷である"><div class="nodeContent"></div></div>
+                            <div  class="node Bside" id="n9" title="死刑制度の代わりに終身刑を採用すれば問題とならない"><div class="nodeContent"></div></div>
+                            <div  class="node Bside" id="n10" title="死刑と無期刑との間に犯罪抑止力としての優位性の差は証明されていない"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n11" title="誤審は自由刑においても取り返しがつかず、別個の問題として扱うべきである"><div class="nodeContent"><small>B1A1</small></div></div>
+                            <div  class="node Aside" id="n12" title="冤罪で生涯を絶望と無念に終えるのは精神的拷問後の死である"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n13" title="国連の人権宣言でも法の下に行われる罰金刑、禁固刑、身体刑、死刑を否定していない"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n14" title="殺人に対して執行される死刑は応報であり人権を軽んじていることには当たらない"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n15" title="諸外国では警官による簡易死刑が存在する。日本で容疑者を射殺するケースは稀である。"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n16" title="苦痛をできるだけ少なく生命を奪う刑は、必ずしも残虐とはいえない"><div class="nodeContent"></div></div>
+                            <div  class="node Aside" id="n17" title="社会復帰しない受刑者を収容し続けることは有意義でない"><div class="nodeContent"></div></div>
+                            <div  class="node Bside" id="n18" title="再審無罪がありえる以上、死刑と自由刑には明確な差異が存在している"><div class="nodeContent"></div></div-->
+                        </div>
+                    </div>
+                </div>
+                <div id="controller">hoge</div>
+            </div>
+            
+        </div>
+
+
+<!-- load scripts at the bottom of your page -->
+        <script src="js/site.js"></script>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    	<script type="text/javascript" src="js/svg.min.js"></script>    
+
+    	<script type="text/javascript" src="js/ECOTree.js"></script>
+    	<script type="text/javascript" src="js/TreeDrawer.js"></script>
+    	<script type="text/javascript" src="js/TreeGenerator.js"></script>
+
+
+        <link rel="stylesheet" href="js/themes/base/jquery.ui.all.css">
+        <link rel="stylesheet" href="../demos.css">
+    	<script>    
+        
+    	//jquery設定
+        $(function() {
+            $( "#tabs" ).tabs();
+    		$( "#ground" ).draggable({ scroll: false });
+    	});
+        
+        //マウスイベント
+        var target = null;
+        function handle(delta) {
+            document.getElementById("wheel").innerHTML="zoom:"+treeDrawer.zoom;
+            treeDrawer.zoom += delta;
+            treeDrawer._zoom();        
+        }
+        
+        function wheel(event){
+            var delta = 0;
+            if (!event) /* For IE. */
+                event = window.event;
+            if (event.wheelDelta) { /* IE/Opera. */
+                delta = event.wheelDelta/120;
+                if (window.opera)
+                    delta = -delta;
+            } else if (event.detail) { /** Mozilla case. */
+                delta = -event.detail/3;
+            }
+            if (delta)
+                handle(delta);
+            if (event.preventDefault) {
+                event.preventDefault();
+            }
+            event.returnValue = false;
+        }
+        
+        if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+        window.onmousewheel = document.onmousewheel = wheel;
+
+        
+        //ウィンドウサイズに合わせて表示
+        window.onresize = window_load;
+        function window_load() {
+            var w = $(window).width();
+            var h = $(window).height();
+            
+            //document.getElementById("hoge").innerHTML = "w:"+w+"px / h:"+h+"px <br />";
+            $('#mainContent').css( 'width', w+'px');
+            $('#panel').css( 'height', (parseInt(h)-50)+'px');
+            $('#tabs').css( 'width', (parseInt(w)-200)+'px');
+            $('#tabs').css( 'height', (parseInt(h)-50)+'px');
+            $('#map').css( 'width', (parseInt(w)-210)+'px');
+            $('#map').css( 'height', (parseInt(h)-115)+'px');
+            $('#controller').css( 'top', (parseInt(h)-300)+'px');
+            $('#controller').css( 'left', (parseInt(w)-300)+'px');
+        }
+        
+    
+    //読み込み終了後に表示
+    $(document).ready(function(){
+        window_load();
+        $('#map').css( 'visibility','visible');
+        $('#controller').css( 'visibility','visible');
+        
+        GenerateTree();
+        treeDrawer = new TreeDrawer('treeMap',t);
+        treeDrawer._draw();
+        $("#treeMap" ).draggable({ scroll: false });
+
+    });
+        
+    </script>
+</body>
+</html>

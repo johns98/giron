@@ -23,12 +23,12 @@
 	<body>
 		<h4>ECOTree Simple Tree 4&nbsp;<span class="copy">&copy;2006 Emilio Cortegoso Lobato</span></h4>
 	    <div id="wheel">wheel dispach</div>  
-<form id="sampleform" >
-<ul>
-<li>onmouseX: <input type="text" value="" name="onmouseX" /></li>
-<li>onmouseY: <input type="text" value="" name="onmouseY" /></li>
-</ul>
-</form>
+        <form id="sampleform" >
+        <ul>
+        <li>onmouseX: <input type="text" value="" name="onmouseX" /></li>
+        <li>onmouseY: <input type="text" value="" name="onmouseY" /></li>
+        </ul>
+        </form>
         <div id='sample2'></div>
 		
     <script>
@@ -124,18 +124,15 @@ function setPosition(){
     
 
 
-                //var zoom=1;
-                var target = null;
+    
+    var target = null;
     function handle(delta) {
         document.getElementById("wheel").innerHTML="zoom:"+treeDrawer.zoom;
         treeDrawer.zoom += delta;
         treeDrawer._zoom();
         
     }
-
-    /** Event handler for mouse wheel event.
-     */
-    function wheel(event){
+   function wheel(event){
             var delta = 0;
             if (!event) /* For IE. */
                     event = window.event;
@@ -146,10 +143,6 @@ function setPosition(){
             } else if (event.detail) { /** Mozilla case. */
                     delta = -event.detail/3;
             }
-            /** If delta is nonzero, handle it.
-             * Basically, delta is now positive if wheel was scrolled up,
-             * and negative, if wheel was scrolled down.
-             */
             if (delta)
                     handle(delta);
             if (event.preventDefault) {
